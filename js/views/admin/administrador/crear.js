@@ -24,30 +24,11 @@ $('document').ready(function() {
 
     console.log(objeto);
 
-    $.ajax({
-    type: 'POST',
-    url: 'https://donleonapi.herokuapp.com/user',
-    crossDomain: true,
-    data: objeto,
-    dataType: 'json',
-    success: function(responseData, textStatus, jqXHR) {
-        //var value = responseData.someKey;
-        console.log(responseData);
-    },
-    error: function (responseData, textStatus, errorThrown) {
-        alert('POST failed.');
-    }
-});
-
-
-    /*
-
-    $.post("https://donleonapi.herokuapp.com/user", objeto)
+    $.post("http://donleonapi.herokuapp.com/user", objeto)
     .done(function( data ) {
       console.log(data);
     });
 
-*/
     /*$.ajax({
       url: `https://donleonapi.herokuapp.com/user`,
       data: objeto,
