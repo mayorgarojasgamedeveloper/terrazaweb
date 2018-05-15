@@ -24,7 +24,7 @@ $('document').ready(function() {
 
     console.log(objeto);
 
-    $.post("http://donleonapi.herokuapp.com/user", objeto)
+    $.post("https://donleonapi.herokuapp.com/user", objeto)
     .done(function( data ) {
       console.log(data);
     });
