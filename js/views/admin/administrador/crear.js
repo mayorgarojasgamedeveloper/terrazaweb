@@ -13,7 +13,7 @@ $('document').ready(function() {
 
     if(status > 0) return 0;
 
-    var objeto = {
+    var usuario = {
       username: $('#username').val(),
       password: md5($('#password').val()),
       name: $('#name').val(),
@@ -22,21 +22,10 @@ $('document').ready(function() {
       phone: $('#phone').val()
     }
 
-    console.log(objeto);
 
-    $.post("https://donleonapi.herokuapp.com/user", objeto)
-    .done(function( data ) {
-      console.log(data);
+    $.post('https://donleonapi.herokuapp.com/user', usuario, function(result){
+        console.log(result);
     });
-
-    /*$.ajax({
-      url: `https://donleonapi.herokuapp.com/user`,
-      data: objeto,
-      crossDomain: true,
-      method: `POST`}
-    ).done(function(data) {
-      alertify.success('Se creo el usuario!');
-    });*/
 
   });
 
