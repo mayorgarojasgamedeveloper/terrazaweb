@@ -21,7 +21,9 @@ $('document').ready(function() {
       email: $('#email').val(),
       phone: $('#phone').val()
     }
-    
+
+    console.log(usuario);
+
     $.post('https://donleonapi.herokuapp.com/user', usuario, function(result){
         console.log(result);
     });
