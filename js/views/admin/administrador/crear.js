@@ -13,15 +13,15 @@ $('document').ready(function() {
 
     if(status > 0) return 0;
 
-    /*var usuario = {
+    var usuarioNuevo = {
       username: $('#username').val(),
-      password: md5($('#password').val()),
+      password: $('#password').val(),
       name: $('#name').val(),
       last_name: $('#last_name').val(),
       email: $('#email').val(),
       phone: $('#phone').val()
-    }*/
-    
+    }
+
     var usuario = {
       username: 'fernando',
       password: '12345678',
@@ -32,8 +32,9 @@ $('document').ready(function() {
     }
 
     console.log(usuario);
+    console.log(usuarioNuevo);
 
-    $.post('https://donleonapi.herokuapp.com/user', usuario, function(result){
+    $.post('https://donleonapi.herokuapp.com/user', usuarioNuevo, function(result){
         console.log(result);
     });
 
